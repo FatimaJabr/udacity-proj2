@@ -48,6 +48,9 @@
       grid-template-columns: 1fr;
       text-align: center;
     }
+     &__buttons {
+    justify-content: center; 
+  }
   }
 }
 @keyframes slide-from-left {

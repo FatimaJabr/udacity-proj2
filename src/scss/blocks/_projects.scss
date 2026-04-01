@@ -15,10 +15,18 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
+    @include utils.responsive(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include utils.responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__btn {
     margin-top: 40px;
+    max-width: 200px;
     display: inline-block;
   }
 

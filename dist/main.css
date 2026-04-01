@@ -201,6 +201,9 @@ button:focus {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .hero__buttons {
+    justify-content: center;
+  }
 }
 
 @keyframes slide-from-left {
@@ -237,8 +240,19 @@ button:focus {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+@media (max-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
 .projects__btn {
   margin-top: 40px;
+  max-width: 200px;
   display: inline-block;
 }
 
