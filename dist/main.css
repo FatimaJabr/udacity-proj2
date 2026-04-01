@@ -32,6 +32,22 @@ body {
   line-height: 1.6;
 }
 
+a:focus,
+button:focus {
+  outline: 2px solid #6c3df4;
+  outline-offset: 2px;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 .btn {
   padding: 12px 22px;
   border-radius: 10px;
@@ -62,7 +78,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
@@ -172,6 +189,13 @@ body {
   display: flex;
   gap: 15px;
 }
+.hero__content {
+  animation: slide-from-left 1.5s ease-out;
+}
+.hero__image {
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+}
 @media (max-width: 900px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -179,6 +203,24 @@ body {
   }
 }
 
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .projects {
   padding: 80px 0;
   text-align: center;
@@ -195,15 +237,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-@media (max-width: 900px) {
-  .projects__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .projects__grid {
-    grid-template-columns: 1fr;
-  }
+.projects__btn {
+  margin-top: 40px;
+  display: inline-block;
 }
 
 .project-card {
