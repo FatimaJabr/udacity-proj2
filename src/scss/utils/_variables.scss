@@ -1,0 +1,13 @@
+$primary-color: #6c3df4;
+$text-color: #333;
+$background-color: #f7f4ff;
+
+$max-width: 1200px;
+$radius: 10px;
+$transition: 0.3s ease;
+
+:root {
+  --header-big: 110px;
+  --header-small: 70px;
+  --header-diff: calc(var(--header-big) - var(--header-small));
+}

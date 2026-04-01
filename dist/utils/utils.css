@@ -1,0 +1,7 @@
+:root {
+  --header-big: 110px;
+  --header-small: 70px;
+  --header-diff: calc(var(--header-big) - var(--header-small));
+}
+
+/*# sourceMappingURL=utils.css.map */

@@ -1,0 +1,62 @@
+@use '../utils/utils' as utils;
+
+.projects {
+
+  padding: 80px 0;
+  text-align: center;
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    @include utils.container;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+  }
+
+  &__btn {
+    margin-top: 40px;
+    display: inline-block;
+  }
+
+}
+.project-card {
+
+  background: white;
+  padding: 20px;
+  border-radius: utils.$radius;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: utils.$transition;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  img {
+    width: 100%;
+    border-radius: utils.$radius;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+
+    background: linear-gradient(90deg, #6a11cb, #8e54e9);
+    color: white;
+
+    border-radius: 20px;
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+}
