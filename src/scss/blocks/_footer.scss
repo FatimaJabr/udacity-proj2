@@ -1,0 +1,32 @@
+@use '../utils/utils' as utils;
+.footer {
+  background: #111;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    a {
+      color: white;
+      font-size: 14px;
+      transition: 0.3s;
+
+      &:hover {
+        color: utils.$primary-color;
+      }
+    }
+  }
+}

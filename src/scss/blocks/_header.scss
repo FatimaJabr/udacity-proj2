@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
 
-    position: relative; // ✅ مهم عشان الناف يتموضع صح
+    position: relative; 
   }
 
   &__logo img {
@@ -80,14 +80,13 @@
   }
 }
 
-/* ✅ MOBILE */
 @include utils.responsive(mobile){
 
   .header__nav {
     position: absolute;
     top: 100%;
-    right: 0; // ✅ صارت تحت الهامبرغر
-    width: 200px; // ✅ مش فل ويدث
+    right: 0;
+    width: 200px; 
 
     background: white;
 
@@ -101,7 +100,7 @@
 
   .header__menu {
     flex-direction: column;
-    align-items: flex-start; // ✅ بدل center
+    align-items: flex-start; 
     padding: 15px;
     gap: 15px;
   }
